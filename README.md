@@ -25,3 +25,12 @@ uac-lua-bypass com_exec "cmd.exe" "<args>"
 - Implement evasive features and test on EDR 
 
 ## Test in Windows VM with Havoc integration
+
+Before using `com_exec` to escalate permission, we cannot use `nanodump` tool to dump LSASS 
+
+![image](https://github.com/user-attachments/assets/8635669d-b2d3-4535-b5c0-5176af51afa8)
+
+After self-inject beacon again with higher priviledge ( local admin using com_exec ), we are able to dump lsass
+
+![image](https://github.com/user-attachments/assets/da5435b1-db7b-438e-acc6-6156ddac4206)
+
